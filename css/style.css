@@ -1,6 +1,9 @@
 /* Base */
 html {
   overflow-x: hidden; }
+  @media (max-width: 500px){
+  html {
+    overflow-x: hidden; } }
 
 body {
   line-height: 1.7;
@@ -8,6 +11,21 @@ body {
   font-weight: 400;
   font-size: 1rem; }
 
+  /* ----------- iPhone 6 ----------- */
+
+  @media screen and (max-width: 375px) {
+      body {
+          overflow: hidden!important;
+      }
+  }
+
+  /* ----------- iPad mini ----------- */
+
+  @media screen and (max-width: 768px) {
+      body {
+          overflow: hidden!important;
+      }
+  }
 ::-moz-selection {
   background: #000;
   color: #fff; }
@@ -613,8 +631,8 @@ body:after {
 .circle-bg {
   position: relative; }
   .circle-bg:after {
-    width: 300px;
-    height: 300px;
+    width: 0px;
+    height: 0px;
     content: "";
     z-index: -1;
     border-radius: 50%;
@@ -2029,3 +2047,20 @@ figure figcaption {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+
+
+.site-section .proud-row{
+  width:100%;
+}
+.site-section .proud-row::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.site-section .proud-row .proud-box{
+  width: 21%;
+  margin: 3% 6%;
+  float: left;
+  display: inline-block;
+  overflow: hidden;
+}
